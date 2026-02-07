@@ -23,4 +23,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: abouken77/agri-python-devops:latest
+          tags: abuoken/agri-python-devops:latest
