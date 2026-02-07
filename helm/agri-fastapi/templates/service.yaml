@@ -5,7 +5,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Abouken77/agri-python-devops.git
+    repoURL: https://github.com/Abuoken77/agri-python-devops.git
     targetRevision: main
     path: helm/agri-fastapi
   destination:
