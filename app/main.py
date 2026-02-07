@@ -1,15 +1,10 @@
 from fastapi import FastAPI
+from prometheus_fastapi_instrumentator import Instrumentator
 
-app = FastAPI(
-    title="Agri Python DevOps",
-    description="FastAPI backend for DevOps assignment",
-    version="1.0.0"
-)
+app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"message": "Agri Python DevOps project is running"}
+    return {"status": "ok"}
 
-@app.get("/health")
-def health():
-    return {"status": "UP"}
+Instrumentator().instrument(app).expose(app)
