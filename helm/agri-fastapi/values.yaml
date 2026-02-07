@@ -1,6 +1,1 @@
-image:
-  repository: abouken77/agri-python-devops
-  tag: latest
-
-service:
-  port: 8000
+auth_enabled: false
