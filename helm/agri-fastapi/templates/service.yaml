@@ -1,17 +1,14 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
+apiVersion: v1
+kind: Service
 metadata:
-  name: agri-python-devops
+  name: agri-fastapi
+  labels:
+    app: agri-fastapi
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/Abuoken77/agri-python-devops.git
-    targetRevision: main
-    path: helm/agri-fastapi
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  selector:
+    app: agri-fastapi
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000
+  type: ClusterIP
