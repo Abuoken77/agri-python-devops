@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agri-python-devops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agri-python-devops
+  template:
+    metadata:
+      labels:
+        app: agri-python-devops
+    spec:
+      containers:
+        - name: agri-python-devops
+          image: abouken77/agri-python-devops:latest
+          ports:
+            - containerPort: 8000
