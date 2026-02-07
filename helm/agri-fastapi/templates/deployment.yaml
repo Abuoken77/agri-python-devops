@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: agri-python-devops
+      app: agri-fastapi
   template:
     metadata:
       labels:
-        app: agri-python-devops
+        app: agri-fastapi
     spec:
       containers:
         - name: agri-python-devops
