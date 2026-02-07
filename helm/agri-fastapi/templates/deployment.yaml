@@ -16,4 +16,5 @@ spec:
         - name: agri-python-devops
           image: abuoken/agri-python-devops:latest
           ports:
-            - containerPort: 8000
+            - name: http
+              containerPort: 8000
