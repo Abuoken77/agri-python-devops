@@ -1,4 +1,4 @@
 image:
-  repository: abouken77/agri-python-devops
+  repository: abuoken/agri-python-devops
   tag: latest
   pullPolicy: Always
